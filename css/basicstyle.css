@@ -1,0 +1,486 @@
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: "Ubuntu", Arial, sans-serif;
+    padding: 0 160px;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.first_background {
+  position: relative;
+  z-index: 0;
+  height: 900px;
+}
+
+/* Псевдоэлемент для фонового изображения */
+.first_background::before {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: calc(-50vw + 50%); /* Центрирование фона */
+    width: 100vw;
+  height: 100%;
+  background-image: url("/img/Background.png");
+  background-size: cover; /* Чтобы не повторялся */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* За всем остальным */
+}
+
+
+a{
+text-decoration: none;
+}
+.navbar {
+    display:flex;
+    margin-top: 38px;
+    margin-left: 5px;
+}
+.first_navbar{
+    display:flex;
+    margin-right: 110px;
+}
+
+.vne_draya{
+    margin-right: 9px;
+    margin-top: 1px;
+}
+
+.second_navbar {
+    display: flex;
+    gap: 40px;
+    margin-top: 12px;
+    margin-right: 130px;
+}
+
+.second_navbar a {
+    position: relative; /* нужно для псевдоэлемента */
+    text-decoration: none;
+    font-weight: 300;
+    font-style: normal; /* font-style: Light не существует */
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.third_navbar{
+    display:flex;
+}
+
+.icons_link{
+    margin-right: 20px;
+}
+
+.tel {
+    text-decoration: none;
+    font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+line-height: 130%;
+letter-spacing: 0%;
+    color:#FFFFFF;
+}
+
+.second_navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 15px; /* немного ниже текста */
+    width: 100%;
+    height: 1px;
+    background-color: #9166F0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+}
+
+.second_navbar a:hover {
+    color: #9166F0;
+}
+
+.second_navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.second_menu {
+    display:flex;
+    margin-top: 163px;
+}
+
+.twobutton {
+    display: flex;
+    margin-bottom: 209px;
+}
+
+.textaboutrost {
+font-weight: 700;
+font-style: Bold;
+font-size: 50px;
+line-height: 130%;
+letter-spacing: 0%;
+text-transform: uppercase;
+color:#FFFFFF;
+width: 617px;
+margin-bottom: 36px;
+}
+.textaboutbim{
+font-weight: 300;
+font-style: Light;
+font-size: 18px;
+line-height: 160%;
+letter-spacing: 0%;
+color:#FFFFFF;
+width: 470px;
+margin-bottom: 56px;
+}
+
+.button{
+    font-family: Ubuntu;
+    border: none;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: 0%;
+color: #FFFFFF;
+padding: 20px 34px 21px 34px;
+transition: all 0.3s ease;
+}
+
+.firstbutton{
+    background: linear-gradient(275.53deg, #9166F0 8.77%, #210C51 85.8%);
+    border-radius: 5px;
+    width: 260px;
+    margin-right: 20px;
+}
+.secondbutton{
+    border:none;
+    color: #9166F0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #9166F0;
+    border-radius: 5px;
+    width: 260px;
+}
+
+.firstbutton:hover {
+  background: linear-gradient(275.53deg, #210C51 8.77%, #9166F0 85.8%);
+}
+
+.secondbutton:hover {
+    color:#FFFFFF;
+    border: unset;
+    width: 260px;
+    height: 66px;
+}
+
+.inversecolor:hover{
+    background: linear-gradient(275.53deg, #9166F0 8.77%, #210C51 85.8%);
+}
+
+.running_line {
+  width: 100vw;
+    margin-left: calc(-50vw + 50%); /* Центрирование бегущей строки */
+  overflow: hidden;
+}
+
+.running_line__track {
+  display: flex;
+  white-space: nowrap;
+  color: #635D6E;
+  font-size: 18px;
+}
+
+.title_base{
+    display:flex;
+    margin-top: 120px;
+    margin-left: 456px;
+font-weight: 700;
+font-style: Bold;
+font-size: 50px;
+line-height: 130%;
+letter-spacing: 0%;
+text-transform: uppercase;
+color: #1A1A1A;
+margin-bottom: 77px;
+
+}
+
+.line_cards {
+    display:flex;
+    gap:30px;
+}
+
+.first_line_cards {
+    margin-bottom: 30px;
+}
+
+.card{
+    width: 410px;
+    height: 420px;
+    box-shadow: 0px 10px 60px 0px #1C2D461A;
+    display:flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.title_cards{
+font-weight: 500;
+font-style: Medium;
+font-size: 30px;
+line-height: 110.00000000000001%;
+letter-spacing: 0%;
+color:#1A1A1A;
+margin: 51px 135px 13px 36px;
+}
+
+.text_cards{
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 160%;
+letter-spacing: 0%;
+color:#1A1A1A; 
+margin-left: 36px;
+margin-right: 33px;
+margin-bottom: 13px;
+}
+
+.more_info_cards a {
+    margin-left: 36px;
+    color:#9166F0;  
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 160%;
+letter-spacing: 0%;
+}
+
+.buttom_cards {
+    background: linear-gradient(275.53deg, #9166F0 8.77%, #633BBC 85.8%);
+    color:#FFFFFF;
+font-weight: 700;
+font-style: Bold;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: 0%;
+border-radius: 5px;
+padding-top: 23px;
+padding-bottom: 23px;
+text-align: center;
+width: 330px;
+margin: auto 41px 40px 39px;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 15px 70px 0px rgba(28, 45, 70, 0.2);
+}
+
+.card{
+    background-size: 135% 135%; /* Растягивает без сохранения пропорций */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Запрещает повторение */
+}
+
+.animated-underline {
+    position: relative;
+    text-decoration: none !important;
+    display: inline-block;
+    color: inherit;
+}
+
+.animated-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+    width: 100%;
+}
+
+.we_can {
+    display: flex;
+    margin-top: 160px;
+}
+
+.we_learn {
+    display: flex;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #1A1A1A;
+    margin-bottom: 72px;
+}
+
+.gif_we_can {
+    margin-left: 150px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    padding: 1px; /* Добавляем внутренний отступ */
+    display: inline-flex; /* Чтобы граница правильно обтекала изображение */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    overflow: hidden; /* Обрезаем выступающие части */
+    box-sizing: border-box; /* Учитываем границу в размерах */
+    width: 644px;
+    height: 644px;
+}
+
+.building_gif {
+    height: 390px;
+    width: auto; /* Сохраняем пропорции */
+    max-width: 1000%; /* Чтобы не выходило за границы */
+    object-fit: contain; /* Сохраняем пропорции без искажений */
+}
+
+.text_we_can {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line_we_can {
+    margin-bottom: 52px;
+    width: 560px;
+    height: 1px;
+    background: #E0E0E0;
+    position: relative;
+    border: none;
+    overflow: hidden;
+}
+
+.line_we_can::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #9166F0;
+    transition: width 0.3s ease;
+}
+
+.text_we_can:hover,
+.text_we_can.active {
+    color: #9166F0;
+    font-weight: 500;
+}
+
+.text_we_can:hover + .line_we_can::after,
+.text_we_can.active + .line_we_can::after {
+    width: 100%;
+}
+
+.text_we_can::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 0;
+    height: 2px;
+    background: #9166F0;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text_we_can.active::after,
+.text_we_can:hover::after {
+    width: 100%;
+}
+
+.line-container {
+    position: relative;
+    margin-bottom: 52px;
+}
+
+.hr-hover-area {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 560px;
+    height: 40px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.text_we_can.active ~ .line-container .line_we_can::after,
+.hr-hover-area:hover ~ .line_we_can::after {
+    width: 100%;
+}
+
+.cases{
+    margin-top: 135px;
+}
+.cases_bcg {
+position: absolute;
+  width: 2226.14px;
+  height: 314.79px;
+  top: 2830px;
+  left: -344px;
+  transform: rotate(12.22deg);
+  opacity: 0.4;
+  background: linear-gradient(267.65deg, rgba(201, 69, 247, 0.2) 20.33%, rgba(69, 129, 247, 0) 89.01%);
+  z-index: -1;
+}
+
+.title_case{
+    display:flex;
+    justify-content: center;
+font-weight: 700;
+font-style: Bold;
+font-size: 50px;
+line-height: 130%;
+letter-spacing: 0%;
+text-transform: uppercase;
+color:#1A1A1A;
+margin-bottom: 30px;
+}
+
+.list_cases{
+display:flex;
+gap:20px;
+justify-content: center;
+}
+
+.list_case {
+    width: 210px;
+    height: 56px;
+    opacity: 1;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    padding: 16px 26px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: #BDBDBD;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    background: transparent;
+    box-sizing: border-box;
+    transition: all 0.4s ease; 
+}
+
+.list_case_active, .list_case:hover {
+    color:#FFFFFF;
+    background: #9166F0;
+    border: 1px solid #9166F0
+}
