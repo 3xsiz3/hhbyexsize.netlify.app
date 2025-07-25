@@ -6,6 +6,7 @@ body {
     background-color: #FFFFFF;
     overflow-x: hidden;
     box-sizing: border-box;
+    color:#1A1A1A;
 }
 
 .first_background {
@@ -178,6 +179,7 @@ transition: all 0.3s ease;
 
 .inversecolor:hover{
     background: linear-gradient(275.53deg, #9166F0 8.77%, #210C51 85.8%);
+    color: #FFFFFF;
 }
 
 .running_line {
@@ -480,7 +482,7 @@ justify-content: center;
     margin-bottom: 80px;
 }
 
-.list_case_active, .list_case:hover {
+.list_case_active, .hover__button:hover {
     color:#FFFFFF;
     background: #9166F0;
     border: 1px solid #9166F0
@@ -668,3 +670,205 @@ background-color: #FFFFFF;
     display: none !important;
 }
 
+.stats {
+    display:flex;
+    flex-direction: column;
+    margin-top: 145px;
+    margin-bottom: 12px;
+}
+
+.stats_more {
+    display:flex;
+     justify-content: center; /* Центрируем блоки */
+  gap: 108px; /* Базовый отступ */
+  margin: 0 auto; /* Центрирование контейнера */
+  max-width: 1200px; /* Ограничиваем максимальную ширину */
+  
+}
+
+.stats_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 204px;
+  max-width: 270px;
+  flex: 1 1 auto;
+  margin-bottom: 40px;
+}
+
+.stats_info {
+font-weight: 700;
+font-style: Bold;
+font-size: 50px;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+}
+
+.first_stats_info {
+font-weight: 700;
+font-style: Bold;
+font-size: 170px;
+line-height: 130%;
+letter-spacing: -10%;
+text-align: center;
+text-transform: uppercase;
+background: linear-gradient(275.53deg, #9166F0 8.77%, #210C51 85.8%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seprator_stats_third {
+    display:flex;
+    align-items: baseline;
+}
+
+.procent {
+    font-weight: 700;
+font-style: Bold;
+font-size: 70px;
+line-height: 130%;
+letter-spacing: -10%;
+text-transform: uppercase;
+background: linear-gradient(275.53deg, #9166F0 8.77%, #210C51 85.8%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(-82px);
+}
+
+.second_stats_info {
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 160%;
+letter-spacing: 0%;
+text-align: center;
+}
+
+.rectangle {
+   position: absolute;
+  width: 2226.14px;
+  height: 314.79px;
+  background: linear-gradient(267.65deg, 
+              rgba(201, 69, 247, 0.2) 20.33%, 
+              rgba(69, 129, 247, 0) 89.01%);
+   transform: 
+    translateX(-50%) translateY(-50%)  /* Сначала центрируем */
+    rotate(167.78deg)                 /* Затем поворачиваем */
+    scaleX(-1) scaleY(-1)            /* Зеркалим */
+    translateX(50%) translateY(50%); /* Возвращаем на место */
+  opacity: 0.4;
+  top: 5017px;
+  left: -344px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.youtube_video {
+    display:flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.case_youtube_video {
+    display:flex;
+    gap:30px;
+}
+
+.title_youtube_video {
+    display:flex;
+    margin: 0 auto;
+    max-width: 926px;
+font-weight: 700;
+font-style: Bold;
+font-size: 50px;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: center;
+text-transform: uppercase;
+    margin-bottom: 116px;
+}
+
+.desc_youtube_video{
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: 0%;
+max-width: 208px;
+margin: 0 auto 23px 20px;
+}
+
+.card_youtube_video{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 60px 0px #1C2D461A;
+    position: relative;
+    min-width: 300px;
+    min-height:240px;
+    border-radius: 10px;
+}
+
+.btn_youtube_video {
+    border:none;
+    display:flex;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+line-height: 130%;
+letter-spacing: 0%;
+color: #FFFFFF;
+background: linear-gradient(275.53deg, #9166F0 8.77%, #633BBC 85.8%);
+border-radius: 5px;
+gap: 10px;
+margin: 0 auto 20px;
+padding: 14px 70px;
+}
+
+.img_youtube_video {
+    width: 260px;
+    height: 145px; 
+    background-image: url(/img/card_youtube_video.png);
+    background-size: cover; /* Заполнит весь блок с обрезкой */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: -72.5px auto 15px;
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+}
+
+.card_youtube_video:hover .img_youtube_video {
+    transform: translateY(-5px);
+}
+
+.button_youtube_video {
+    display:flex;
+    margin: 0 auto;
+border-width: 1px;
+border-radius: 5px;
+padding-top: 20px;
+padding-right: 34px;
+padding-bottom: 21px;
+padding-left: 34px;
+gap: 10px;
+border: 1px solid #9166F0;
+box-shadow: 0px 10px 25px 0px #D2B1CF4D;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: center;
+color: #9166F0;
+background-color: #FFFFFF;
+max-width: 360px;
+margin-top: 60px;
+}

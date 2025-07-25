@@ -130,4 +130,68 @@ document.querySelectorAll('.list_case').forEach(button => {
   
   // Активируем кнопку "Все работы" по умолчанию
   document.querySelector('.list_case_active').click();
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const statsBlocks = document.querySelectorAll('.stats_block');
+  let animated = false; // Флаг, чтобы отслеживать было ли уже воспроизведено
+
+  function animateNumbers() {
+    if (animated) return; // Если уже анимировали, выходим
+    
+    statsBlocks.forEach(block => {
+      const numberElement = block.querySelector('.first_stats_info');
+      const percentElement = block.querySelector('.procent');
+      
+      if (numberElement) {
+        const targetNumber = parseInt(numberElement.textContent);
+        const duration = 1000; // Длительность анимации в мс
+        const startTime = Date.now();
+        
+        numberElement.textContent = '0';
+        
+        function updateNumber() {
+          const currentTime = Date.now();
+          const progress = Math.min(1, (currentTime - startTime) / duration);
+          const currentNumber = Math.floor(progress * targetNumber);
+          
+          numberElement.textContent = currentNumber.toString();
+          
+          if (progress < 1) {
+            requestAnimationFrame(updateNumber);
+          } else if (percentElement) {
+            // Если есть процент, добавляем его после завершения анимации числа
+            percentElement.style.opacity = '1';
+          }
+        }
+        
+        requestAnimationFrame(updateNumber);
+      }
+    });
+    
+    animated = true; // Помечаем как анимированное
+  }
+
+  function checkVisibility() {
+    const statsSection = document.querySelector('.stats');
+    if (!statsSection) return;
+    
+    const rect = statsSection.getBoundingClientRect();
+    const isVisible = (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+    
+    if (isVisible) {
+      animateNumbers();
+      // Удаляем обработчик после первого срабатывания
+      window.removeEventListener('scroll', checkVisibility);
+    }
+  }
+
+  // Проверяем при загрузке страницы (может быть уже в viewport)
+  checkVisibility();
+  
+  // Добавляем обработчик скролла
+  window.addEventListener('scroll', checkVisibility);
 });
