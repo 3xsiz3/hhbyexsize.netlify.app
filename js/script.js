@@ -194,4 +194,68 @@ document.querySelectorAll('.list_case').forEach(button => {
   
   // Добавляем обработчик скролла
   window.addEventListener('scroll', checkVisibility);
+  });
+
+   // Открытие модального окна
+  document.querySelectorAll('.buttom_cards').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('modalOverlay').style.display = 'flex';
+      document.body.classList.add('modal-open');
+    });
+  });
+
+  // Закрытие модального окна
+  document.querySelector('.modal-close').addEventListener('click', () => {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.body.classList.remove('modal-open');
+  });
+
+  // Закрытие при клике вне модального окна
+  document.getElementById('modalOverlay').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('modalOverlay')) {
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
+  });
+
+  const modalOverlay = document.getElementById('modalOverlay');
+const modalForm = modalOverlay.querySelector('.modal-form-window');
+const modalThankYou = modalOverlay.querySelector('.modal-thank-you');
+
+// Открыть форму
+document.querySelectorAll('.buttom_cards').forEach(button => {
+  button.addEventListener('click', () => {
+    modalOverlay.style.display = 'flex';
+    document.body.classList.add('modal-open');
+    modalForm.classList.add('show');
+  });
+});
+
+// Закрытие по крестику или клику вне окна
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('modal-close')) {
+    closeAllModals();
+  }
+});
+
+function closeAllModals() {
+  modalForm.classList.remove('show');
+  modalThankYou.classList.remove('show');
+  document.body.classList.remove('modal-open');
+  setTimeout(() => {
+    modalOverlay.style.display = 'none';
+  }, 400);
+}
+
+// При отправке формы показываем "спасибо"
+document.getElementById('projectForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Закрыть форму
+  modalForm.classList.remove('show');
+
+  // Показать "Спасибо"
+  setTimeout(() => {
+    modalThankYou.classList.add('show');
+  }, 400);
 });

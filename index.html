@@ -61,37 +61,37 @@
 BIM проектов  </div>
               <div class="text_cards">Осуществляем анализ технического задания на BIM-проектирование, информационных требований и плана выполнения BIM-проекта на предмет</div>
               <div class="more_info_cards"><a href="" class = "animated-underline">Подробнее</a></div>
-              <buttom class="buttom_cards inversecolor">Оставить заявку</buttom>
+              <button class="buttom_cards inversecolor">Оставить заявку</button>
             </div>
             <div class="card" style="background-image: url(/img/card2.png);">
               <div class="title_cards">Внедрение BIM</div>
               <div class="text_cards">Мы помогаем внедрить BIM в вашу компанию используя свой 10 летний опыт внедрения BIM в свой бизнес.</div>
-              <buttom class="buttom_cards inversecolor">Оставить заявку</buttom>
+              <button class="buttom_cards inversecolor">Оставить заявку</button>
             </div>
             <div class="card" style="background-image: url(/img/card3.png);">
               <div class="title_cards">Обучение
 проектировщиков</div>
               <div class="text_cards">Мы обучаем применять в архитектурном проектировании технологии Building Information Modelling (BIM) или информационное моделирование зданий...</div>
               <div class="more_info_cards"><a href="" class = "animated-underline">Подробнее</a></div>
-              <buttom class="buttom_cards inversecolor">Оставить заявку</buttom>
+              <button class="buttom_cards inversecolor">Оставить заявку</button>
             </div>
           </div>
           <div class="second_line_cards line_cards">
             <div class="card" style="background-image: url(/img/card4.png);">
               <div class="title_cards">Создание BIM библиотек и шаблонов</div>
               <div class="text_cards">Мы разрабатываем BIM-модель вашего проекта целиком, либо отдельных его частей.</div>
-              <buttom class="buttom_cards inversecolor">Оставить заявку</buttom>
+              <button class="buttom_cards inversecolor">Оставить заявку</button>
             </div>
             <div class="card" style="background-image: url(/img/card5.png);">
               <div class="title_cards">Разработка
 плагинов и скриптов</div>
               <div class="text_cards">Создаем программные модули, СПО , скрипты и плагины для САПР AVEVA, Autodesk Revit и Dynamo.</div>
-              <buttom class="buttom_cards inversecolor">Оставить заявку</buttom>
+              <button class="buttom_cards inversecolor">Оставить заявку</button>
             </div>
             <div class="card" style="background-image: url(/img/card6.png);">
               <div class="title_cards">Перевод документации из 2D в BIM</div>
               <div class="text_cards">Выполним преобразование 2D в 3D модель BIM - создание информационной 3D модели из 2D чертежей и документации.</div>
-              <buttom class="buttom_cards inversecolor">Оставить заявку</buttom>
+              <button class="buttom_cards inversecolor">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -297,5 +297,41 @@ BIM проектов  </div>
     </section>
     <div class="rectangle"></div>
     </div>
+    <section class="js_submit_aplication">
+  <div class="modal-overlay" id="modalOverlay">
+
+    <!-- Модалка формы -->
+    <div class="modal modal-form-window">
+      <div class="modal-content">
+        <span class="modal-title">Заполните форму</span>
+        <span class="modal-subtitle">Наш менеджер перезвонит вам, подробно обсудит с вами задачу и сориентирует по стоимости</span>
+
+        <form class="modal-form" id="projectForm">
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="tel" placeholder="Телефон" required>
+          <button type="submit" class="modal-submit inversecolor">Обсудить проект</button>
+        </form>
+
+        <span class="modal-agreement">Нажимая на кнопку, вы соглашаетесь с <a href="/privacy-policy">Политикой конфиденциальности</a></span>
+      </div>
+      <button class="modal-close">&times;</button>
+    </div>
+
+    <div class="modal modal-thank-you">
+  <div class="modal-content thank-you-content">
+    <div class="checkmark-circle">
+      <svg viewBox="0 0 52 52" class="checkmark" xmlns="http://www.w3.org/2000/svg">
+        <circle class="checkmark-circle-bg" cx="26" cy="26" r="25" fill="#9166F0"/>
+        <path class="checkmark-check" fill="none" stroke="#fff" stroke-width="5" d="M14 27l7 7 17-17"/>
+      </svg>
+    </div>
+
+    <h2 class="modal-title">Спасибо!</h2>
+    <p class="modal-subtitle">Ваша заявка отправлена. В ближайшее время наш менеджер свяжется с вами.</p>
+  </div>
+  <button class="modal-close">&times;</button>
+</div>
+  </div>
+</section>
     <script src="/js/script.js"></script>
 </body>
