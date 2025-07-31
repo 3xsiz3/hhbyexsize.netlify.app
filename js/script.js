@@ -288,5 +288,8 @@ fetch('/html/navbar.html')
     }
   });
 
-  
-  
+
+  // добавление контактов в конец страницы
+  fetch('/html/contacts.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('contaacts').innerHTML = html);

@@ -1379,9 +1379,146 @@ textarea {
   background: currentColor;
   transform: scaleX(0);
   transform-origin: 0 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .custom-underlinee:hover::after {
+  transform: scaleX(1);
+}
+
+.contacts {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: url(/img/background_contacts.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contacts_container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 160px;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: column;
+  color:#FFFFFF;
+}
+
+.first_block_contacts, .second_block_contacts {
+  display:flex;
+  justify-content: space-between;
+}
+
+.line_contacts {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  height: 0;
+  border: none;
+  border-top: 1px solid #FFFFFF;
+  opacity: 0.3;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 34px;
+}
+
+.info_block-contacts {
+display:flex;
+flex-direction: column;
+gap:10px;
+}
+
+.info_contacts {
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: 0%;
+color:#B6B6B6;
+}
+
+.link_contacts {
+  color:#FFFFFF;
+font-weight: 700;
+font-size: 20px;
+line-height: 130%;
+letter-spacing: 0%;
+}
+
+.learn_contacts {
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: 0%;
+color:#FFFFFF;
+}
+
+.color_gray {
+color: #B6B6B6;
+}
+
+.copyright {
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: 0%;
+}
+
+.polytics {
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: center;
+color: #9166F0;
+}
+
+.development_contacts {
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: right;
+}
+
+.Wtsudio {
+color:#9166F0;
+}
+
+.learn_contacts:hover, .link_contacts:hover, .tel:hover {
+  color:#9166F0;
+}
+
+.custom-underlineee {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-underlineee::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 115px;
+  bottom: -3px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.5s ease;
+}
+
+.custom-underlineee:hover::after {
   transform: scaleX(1);
 }
