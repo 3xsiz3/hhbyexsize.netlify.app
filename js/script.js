@@ -259,3 +259,34 @@ document.getElementById('projectForm').addEventListener('submit', (e) => {
     modalThankYou.classList.add('show');
   }, 400);
 });
+
+fetch('/html/navbar.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('navbaaar').innerHTML = html;
+
+    const submitBtn = document.getElementById('submit-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalForm = modalOverlay.querySelector('.modal-form-window');
+        const modalThankYou = modalOverlay.querySelector('.modal-thank-you');
+
+        modalForm.classList.remove('show');
+        modalOverlay.style.display = 'flex';
+        modalThankYou.classList.add('show');
+        document.body.classList.add('modal-open');
+
+        // Сброс значений формы
+        const form = modalOverlay.querySelector('form');
+        if (form) {
+          form.reset();
+        }
+      });
+    }
+  });
+
+  
+  
