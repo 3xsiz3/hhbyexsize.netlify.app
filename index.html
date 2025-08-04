@@ -6,6 +6,7 @@
     <title>Hh-soft</title>
     <link rel="stylesheet" href = "/css/basicstyle.css">
     <script src="https://kit.fontawesome.com/b8ffaffb32.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 <body>
     <div class="first_background">
@@ -31,6 +32,51 @@
           </div>
           <div class="telephone">
             <a href="tel:+79159744133" class="tel custom-underlinee">+7 (915) 974 41 33</a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar_mobile">
+        <div class="frst_navbar_mobile">
+          <div class="first_navbar">
+            <div class="first_first_navbar"><img src="/img/vnedraya.png" alt="vnedraya" class="vne_draya"></div>
+            <div class="first_second_navbar">
+              <div class="first_second_first_navbar"><img src="/img/Vector1.png" alt="hh-soft" class="vectorhh"></div>
+              <div class="first_second_first_navbar"><img src="/img/Vector.png" alt="bim" class="vectorbim"></div>
+            </div>
+          </div>
+        </div>
+        <div class="second_navbar_mobile">
+          <button class="btn_navbar_mobile" id="burger-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- Мобильное выпадающее меню -->
+        <div class="mobile_menu" id="mobile-menu">
+          <button class="close_mobile_menu" id="close-mobile-menu" aria-label="Закрыть меню">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="first__navbar">
+            <div class="first__first_navbar"><img src="/img/vnedraya.png" alt="vnedraya" class="vne_draya"></div>
+            <!-- <div class="first_second_navbar">
+              <div class="first_second_first_navbar"><img src="/img/hh-soft-mobile.svg" alt="hh-soft" class="vectorhh svg_black"></div>
+              <div class="first_second_first_navbar"><img src="/img/import-mobile.svg" alt="bim" class="vectorbim svg_black"></div>
+            </div> -->
+          </div>
+          <div class="second_navbar">
+            <a href="" class="navbar_link">BIM-контент</a>
+            <a href="" class="navbar_link">Сопровождение BIM проектов</a>
+            <a href="" class="navbar_link">Обучение</a>
+            <a href="" class="navbar_link">Контакты</a>
+          </div>
+          <div class="third_navbar">
+            <div class="telephone">
+              <a href="tel:+79159744133" class="tel custom-underlinee">+7 (915) 974 41 33</a>
+              <a href="mailto:fateevart@mail.ru" class="tel mail_mobile custom-underlinee">fateevart@mail.ru</a>
+            </div>
+            <div class="icons_link">
+              <a href="https://vk.com/3xsiz3" target="_blank"><i class="fa-brands fa-vk fa-2xl"></i></a>
+              <a href="https://instagram.com/3xsiz3" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+              <a href="https://t.me/exsiz3" target="_blank"><i class="fa-brands fa-telegram fa-2xl"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -129,16 +175,56 @@ BIM проектов  </div>
         <img src="/img/building.gif" alt="Анимация строительства" class="building_gif">
     </div>
     </section>
+    <section class="we_can_mobile">
+    <span class="we_learn_mobile">Что мы умеем:</span>
+      <div class="we_can_mobile_items">
+        <div class="we_can_mobile_item">
+          <img src="/img/building.gif" alt="Анимация строительства" class="building_gif_mobile">
+          <div class="we_can_mobile_text">Создавать BIM библиотеки</div>
+        </div>
+        <div class="we_can_mobile_item">
+          <img src="/img/building.gif" alt="Анимация строительства" class="building_gif_mobile">
+          <div class="we_can_mobile_text">Проектные компании</div>
+        </div>
+        <div class="we_can_mobile_item">
+          <img src="/img/building.gif" alt="Анимация строительства" class="building_gif_mobile">
+          <div class="we_can_mobile_text">Проектные институты</div>
+        </div>
+        <div class="we_can_mobile_item">
+          <img src="/img/building.gif" alt="Анимация строительства" class="building_gif_mobile">
+          <div class="we_can_mobile_text">Архитектурные бюро и мастерские</div>
+        </div>
+        <div class="we_can_mobile_item">
+          <img src="/img/building.gif" alt="Анимация строительства" class="building_gif_mobile">
+          <div class="we_can_mobile_text">Компании застройщика</div>
+        </div>
+      </div>
+  </section>
     <section class="cases">
       <div class="cases_bcg"></div>
       <div class="cases_containers">
         <span class="title_case">НАШИ КЕЙСЫ</span>
+
+        <!-- Десктопный фильтр -->
         <div class="list_cases">
           <button class="list_case list_case_active hover__button">Все работы</button>
           <button class="list_case hover__button">Внедрение</button>
           <button class="list_case hover__button">Сопровождение</button>
           <button class="list_case hover__button">Обучение</button>
         </div>
+
+        <!-- Мобильный фильтр -->
+        <div class="list_cases_mobile">
+          <button class="list_cases_mobile_selected" id="mobile-cases-dropdown-btn">Все работы</button>
+          <div class="list_cases_mobile_dropdown" id="mobile-cases-dropdown-list">
+            <div class="list_case_mobile_option" data-filter="Все работы">Все работы</div>
+            <div class="list_case_mobile_option" data-filter="Внедрение">Внедрение</div>
+            <div class="list_case_mobile_option" data-filter="Сопровождение">Сопровождение</div>
+            <div class="list_case_mobile_option" data-filter="Обучение">Обучение</div>
+          </div>
+        </div>
+
+        <!-- Десктопные кейсы -->
         <div class="cases_themselves">
           <div class="horisontal_cases">
             <div class="case">
@@ -147,7 +233,7 @@ BIM проектов  </div>
                 <div class="title_case">Внедрение BIM технологии в ООО «Аверс»</div>
                 <div class="customer">Заказчик:</div>
                 <div class="company">ООО «Аверс», г. Магнитогорск</div>
-                <div class="customer" style="margin-top: 12px;">Заказчик:</div>
+                <div class="customer" style="margin-top: 12px;">Задача:</div>
                 <div class="about_case">Переход компании на BIM технологию. Построение информационных моделей и выпуск проектной и рабочей документации в Revit на этапе пилотного проекта.</div>
                 <div class="back_case">
                   <div class="arrow_case"></div>
@@ -161,7 +247,7 @@ BIM проектов  </div>
                 <div class="title_case">Обучение в ООО «Эффективное проектирование и аудит»</div>
                 <div class="customer">Заказчик:</div>
                 <div class="company">ООО «Эффективное проектирование и аудит», г. Екатеринбург</div>
-                <div class="customer" style="margin-top: 12px;">Заказчик:</div>
+                <div class="customer" style="margin-top: 12px;">Задача:</div>
                 <div class="about_case">Обучение сотрудников по направлению разработка рабочей документации в Revit в части монолитных конструкций.</div>
                 <div class="back_case">
                   <div class="arrow_case"></div>
@@ -177,7 +263,7 @@ BIM проектов  </div>
                 <div class="title_case">Сопровождение BIM проекта ООО «Реком-про»</div>
                 <div class="customer">Заказчик:</div>
                 <div class="company">ООО «Реком-про», г. Екатеринбург</div>
-                <div class="customer" style="margin-top: 12px;">Заказчик:</div>
+                <div class="customer" style="margin-top: 12px;">Задача:</div>
                 <div class="about_case">Сопровождение проекта по направлениям АР, ВК ,ОВ, КЖ проектной группы из 9 человек , разрабатывающей рабочую документацию комплекса жилых зданий.</div>
                 <div class="back_case">
                   <div class="arrow_case"></div>
@@ -191,7 +277,7 @@ BIM проектов  </div>
                 <div class="title_case">Сопровождение BIM проекта ООО «Свод»</div>
                 <div class="customer">Заказчик:</div>
                 <div class="company">ООО «Свод» г. Санкт-Петербург</div>
-                <div class="customer" style="margin-top: 12px;">Заказчик:</div>
+                <div class="customer" style="margin-top: 12px;">Задача:</div>
                 <div class="about_case">Сопровождение проекта по направлениям АР, ВК ,ОВ, КЖ проектной группы из 10 человек , разрабатывающей рабочую и проектную документацию.</div>
                 <div class="back_case">
                   <div class="arrow_case"></div>
@@ -207,7 +293,7 @@ BIM проектов  </div>
                 <div class="title_case">Внедрение BIM технологии в ООО «Аверс»</div>
                 <div class="customer">Заказчик:</div>
                 <div class="company">ООО «Аверс», г. Магнитогорск</div>
-                <div class="customer" style="margin-top: 12px;">Заказчик:</div>
+                <div class="customer" style="margin-top: 12px;">Задача:</div>
                 <div class="about_case">Переход компании на BIM технологию. Построение информационных моделей и выпуск проектной и рабочей документации в Revit на этапе пилотного проекта.</div>
                 <div class="back_case">
                   <div class="arrow_case"></div>
@@ -221,7 +307,7 @@ BIM проектов  </div>
                 <div class="title_case">Обучение в ООО «Эффективное проектирование и аудит»</div>
                 <div class="customer">Заказчик:</div>
                 <div class="company">ООО «Эффективное проектирование и аудит», г. Екатеринбург</div>
-                <div class="customer" style="margin-top: 12px;">Заказчик:</div>
+                <div class="customer" style="margin-top: 12px;">Задача:</div>
                 <div class="about_case">Обучение сотрудников по направлению разработка рабочей документации в Revit в части монолитных конструкций.</div>
                 <div class="back_case">
                   <div class="arrow_case"></div>
@@ -231,39 +317,124 @@ BIM проектов  </div>
             </div>
           </div>
         </div>
+
+        <!-- Мобильные кейсы -->
+        <div class="cases_themselves_mobile">
+          <div class="case_mobile" data-type="Внедрение">
+            <img class="photo_case_mobile" src="/img/case1mobile.png" alt="">
+            <div class="info_case_mobile">
+              <div class="title_case_mobile">Внедрение BIM технологии в ООО «Аверс»</div>
+              <div class="customer_mobile">Заказчик:</div>
+              <div class="company_mobile">ООО «Аверс», г. Магнитогорск</div>
+              <div class="customer_mobile" style="margin-top: 16px;">Задача:</div>
+              <div class="about_case_mobile">Переход компании на BIM технологию. Построение информационных моделей и выпуск проектной и рабочей документации в Revit на этапе пилотного проекта.</div>
+              <div class="back_case">
+                  <div class="arrow_case"></div>
+                  <button class="button_case custom-underline">Смотреть работу</button>
+                </div>
+            </div>
+          </div>
+          <div class="case_mobile" data-type="Обучение">
+            <img class="photo_case_mobile" src="/img/case2mobile.png" alt="">
+            <div class="info_case_mobile">
+              <div class="title_case_mobile">Обучение в ООО «Эффективное проектирование и аудит»</div>
+              <div class="customer_mobile">Заказчик:</div>
+              <div class="company_mobile">ООО «Эффективное проектирование и аудит», г. Екатеринбург</div>
+              <div class="customer_mobile" style="margin-top: 16px;">Задача:</div>
+              <div class="about_case_mobile">Обучение сотрудников по направлению разработка рабочей документации в Revit в части монолитных конструкций.</div>
+              <div class="back_case">
+                  <div class="arrow_case"></div>
+                  <button class="button_case custom-underline">Смотреть работу</button>
+                </div>
+            </div>
+          </div>
+          <div class="case_mobile" data-type="Сопровождение">
+            <img class="photo_case_mobile" src="/img/case3mobile.png" alt="">
+            <div class="info_case_mobile">
+              <div class="title_case_mobile">Сопровождение BIM проекта ООО «Реком-про»</div>
+              <div class="customer_mobile">Заказчик:</div>
+              <div class="company_mobile">ООО «Реком-про», г. Екатеринбург</div>
+              <div class="customer_mobile" style="margin-top: 16px;">Задача:</div>
+              <div class="about_case_mobile">Сопровождение проекта по направлениям АР, ВК ,ОВ, КЖ проектной группы из 9 человек , разрабатывающей рабочую документацию комплекса жилых зданий.</div>
+              <div class="back_case">
+                  <div class="arrow_case"></div>
+                  <button class="button_case custom-underline">Смотреть работу</button>
+                </div>
+            </div>
+          </div>
+          <div class="case_mobile" data-type="Сопровождение">
+            <img class="photo_case_mobile" src="/img/case4mobile.png" alt="">
+            <div class="info_case_mobile">
+              <div class="title_case_mobile">Сопровождение BIM проекта ООО «Свод»</div>
+              <div class="customer_mobile">Заказчик:</div>
+              <div class="company_mobile">ООО «Свод» г. Санкт-Петербург</div>
+              <div class="customer_mobile" style="margin-top: 16px;">Задача:</div>
+              <div class="about_case_mobile">Сопровождение проекта по направлениям АР, ВК ,ОВ, КЖ проектной группы из 10 человек , разрабатывающей рабочую и проектную документацию.</div>
+              <div class="back_case">
+                  <div class="arrow_case"></div>
+                  <button class="button_case custom-underline">Смотреть работу</button>
+                </div>
+            </div>
+          </div>
+          <div class="case_mobile" data-type="Внедрение">
+            <img class="photo_case_mobile" src="/img/case5mobile.png" alt="">
+            <div class="info_case_mobile">
+              <div class="title_case_mobile">Внедрение BIM технологии в ООО «Аверс»</div>
+              <div class="customer_mobile">Заказчик:</div>
+              <div class="company_mobile">ООО «Аверс», г. Магнитогорск</div>
+              <div class="customer_mobile" style="margin-top: 16px;">Задача:</div>
+              <div class="about_case_mobile">Переход компании на BIM технологию. Построение информационных моделей и выпуск проектной и рабочей документации в Revit на этапе пилотного проекта.</div>
+              <div class="back_case">
+                  <div class="arrow_case"></div>
+                  <button class="button_case custom-underline">Смотреть работу</button>
+                </div>
+            </div>
+          </div>
+          <div class="case_mobile" data-type="Обучение">
+            <img class="photo_case_mobile" src="/img/case6mobile.png" alt="">
+            <div class="info_case_mobile">
+              <div class="title_case_mobile">Обучение в ООО «Эффективное проектирование и аудит»</div>
+              <div class="customer_mobile">Заказчик:</div>
+              <div class="company_mobile">ООО «Эффективное проектирование и аудит», г. Екатеринбург</div>
+              <div class="customer_mobile" style="margin-top: 16px;">Задача:</div>
+              <div class="about_case_mobile">Обучение сотрудников по направлению разработка рабочей документации в Revit в части монолитных конструкций.</div>
+              <div class="back_case">
+                  <div class="arrow_case"></div>
+                  <button class="button_case custom-underline">Смотреть работу</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
         <div class="read_me">
           <button class="buttom_view_more inversecolor">Показать еще</button>
         </div>
       </div>
     </section>
     <section class="stats">
-      <div class="stats_info">hh-soft в цифрах</div>
-      <div class="stats_more">
-        <div class="stats_block">
-          <div class="first_stats_info">10</div>
-          <div class="second_stats_info">лет - средний опыт работы
-наших BIM-менеджеров</div>
-        </div>
-        <div class="stats_block">
-          <div class="first_stats_info">150</div>
-          <div class="second_stats_info">проектировщиков мы
-обучили работе в Revil</div>
-        </div>
-        <div class="stats_block">
-          <div class="seprator_stats_third">
-            <div class="first_stats_info">90</div>
-            <div class="procent">%</div>
-          </div>
-          <div class="second_stats_info">наших клиентов повторно
-заказывают наши услуги</div>
-        </div>
-        <div class="stats_block">
-          <div class="first_stats_info">5</div>
-          <div class="second_stats_info">лет мы успешно<br>
-внедряем BIM</div>
-        </div>
+  <div class="stats_info">hh-soft в цифрах</div>
+  <div class="stats_more">
+    <div class="stats_block">
+      <div class="first_stats_info">10</div>
+      <div class="second_stats_info">лет - средний опыт работы<br>наших BIM-менеджеров</div>
+    </div>
+    <div class="stats_block">
+      <div class="first_stats_info">150</div>
+      <div class="second_stats_info">проектировщиков мы<br>обучили работе в Revit</div>
+    </div>
+    <div class="stats_block">
+      <div class="seprator_stats_third">
+        <div class="first_stats_info">90</div>
+        <div class="procent">%</div>
       </div>
-    </section>
+      <div class="second_stats_info">наших клиентов повторно<br>заказывают наши услуги</div>
+    </div>
+    <div class="stats_block">
+      <div class="first_stats_info">5</div>
+      <div class="second_stats_info">лет мы успешно<br>внедряем BIM</div>
+    </div>
+  </div>
+</section>
     <section class="youtube_video">
       <span class="title_youtube_video">Посмотрите наши бесплатные уроки по bim на youtube</span>
       <div class="case_youtube_video">
@@ -340,3 +511,4 @@ BIM проектов  </div>
 </section>
     <script src="/js/script.js"></script>
 </body>
+</html>

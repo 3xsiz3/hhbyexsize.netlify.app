@@ -145,7 +145,7 @@ document.querySelectorAll('.list_case').forEach(button => {
       
       if (numberElement) {
         const targetNumber = parseInt(numberElement.textContent);
-        const duration = 1000; // Длительность анимации в мс
+        const duration = 3000; // Длительность анимации в мс
         const startTime = Date.now();
         
         numberElement.textContent = '0';
@@ -286,10 +286,109 @@ fetch('/html/navbar.html')
         }
       });
     }
+
+    // === ДОБАВЬТЕ ЭТО СЮДА ===
+    const submitBtnMobile = document.getElementById('submit-btn-mobile');
+    if (submitBtnMobile) {
+      submitBtnMobile.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalForm = modalOverlay.querySelector('.modal-form-window');
+        const modalThankYou = modalOverlay.querySelector('.modal-thank-you');
+
+        modalForm.classList.remove('show');
+        modalOverlay.style.display = 'flex';
+        modalThankYou.classList.add('show');
+        document.body.classList.add('modal-open');
+
+        // Сброс значений формы
+        const form = modalOverlay.querySelector('form');
+        if (form) {
+          form.reset();
+        }
+      });
+    }
+    // === КОНЕЦ ДОБАВЛЕНИЯ ===
   });
 
 
   // добавление контактов в конец страницы
   fetch('/html/contacts.html')
       .then(response => response.text())
-      .then(html => document.getElementById('contaacts').innerHTML = html);
+  .then(html => document.getElementById('contaacts').innerHTML = html);
+      
+//+ krestik
+// ...existing code...
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerBtn = document.getElementById('burger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-mobile-menu');
+
+  if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener('click', function() {
+      mobileMenu.classList.add('active');
+    });
+  }
+  if (closeBtn && mobileMenu) {
+    closeBtn.addEventListener('click', function() {
+      mobileMenu.classList.remove('active');
+    });
+  }
+});
+// ...existing code...
+
+
+
+// +mobile cases menu
+document.addEventListener('DOMContentLoaded', function() {
+  // Мобильный выпадающий фильтр кейсов
+  const dropdownBtn = document.getElementById('mobile-cases-dropdown-btn');
+  const dropdownList = document.getElementById('mobile-cases-dropdown-list');
+  const options = document.querySelectorAll('.list_case_mobile_option');
+  const cases = document.querySelectorAll('.case_mobile');
+
+  if (dropdownBtn && dropdownList) {
+    dropdownBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdownList.classList.toggle('active');
+    });
+
+    options.forEach(option => {
+      option.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        dropdownBtn.textContent = filter;
+        dropdownList.classList.remove('active');
+
+        cases.forEach(card => {
+          if (filter === 'Все работы' || card.dataset.type === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Закрытие по клику вне
+    document.addEventListener('click', function(e) {
+      if (!dropdownList.contains(e.target) && e.target !== dropdownBtn) {
+        dropdownList.classList.remove('active');
+      }
+    });
+  }
+});
+
+
+// + block масштаба
+document.addEventListener('touchstart', function(event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, { passive: false });
+
+document.addEventListener('touchmove', function(event) {
+  if (event.scale !== undefined && event.scale !== 1) {
+    event.preventDefault();
+  }
+}, { passive: false });
