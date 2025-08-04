@@ -392,3 +392,15 @@ document.addEventListener('touchmove', function(event) {
     event.preventDefault();
   }
 }, { passive: false });
+
+
+// Открытие модального окна по кнопке "Обсудить проект"
+document.querySelectorAll('.firstbutton').forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('modalOverlay').style.display = 'flex';
+    document.body.classList.add('modal-open');
+    const modalForm = document.querySelector('.modal-form-window');
+    if (modalForm) modalForm.classList.add('show');
+  });
+});
